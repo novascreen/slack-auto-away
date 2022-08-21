@@ -43,15 +43,13 @@ version: "3.8"
 
 services:
   slack-auto-away:
+    image: ghcr.io/novascreen/slack-auto-away:latest
     environment:
       SLACK_TOKEN: ${SLACK_TOKEN}
       SLACK_COOKIE: ${SLACK_COOKIE}
       CRON_AUTO: ${CRON_AUTO}
       CRON_AWAY: ${CRON_AWAY}
       TIMEZONE: ${TIMEZONE}
-    build:
-      context: .
-      dockerfile: Dockerfile
 ```
 
 Then run it:
