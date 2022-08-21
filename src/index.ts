@@ -9,5 +9,9 @@ console.log(`Timezone: ${timezone}`);
 console.log(`Schedule for setting presence to away: ${cronAway}`);
 console.log(`Schedule for setting presence to auto: ${cronAuto}`);
 
-new CronJob(cronAuto, () => updatePresence("auto"), null, true, timezone);
-new CronJob(cronAway, () => updatePresence("away"), null, true, timezone);
+function handleError(error: Error) {
+  console.error("Failed to update presence", error);
+}
+
+new CronJob(cronAuto, () => updatePresence("auto").catch(handleError), null, true, timezone);
+new CronJob(cronAway, () => updatePresence("away").catch(handleError), null, true, timezone);
