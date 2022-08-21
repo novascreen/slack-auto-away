@@ -36,6 +36,8 @@ docker compose -d --build
 
 ### Alternative:
 
+You'll need to be [logged in to GitHub Packages](https://docs.github.com/en/enterprise-server@3.3/packages/working-with-a-github-packages-registry/working-with-the-docker-registry#authenticating-with-a-personal-access-token)
+
 Create a new folder and add a `.env` as described above, then create a `docker-compose.yml` file with these contents:
 
 ```
