@@ -7,7 +7,9 @@
     "testAuto": "esr src/testAuto.ts",
     "testAway": "esr src/testAway.ts",
     "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build -t ghcr.io/novascreen/slack-auto-away:latest .",
+    "docker:push": "docker push ghcr.io/novascreen/slack-auto-away:latest"
   },
   "keywords": [],
   "author": "Thomas Hermann",

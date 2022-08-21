@@ -33,3 +33,29 @@ Source: https://github.com/yuya373/emacs-slack#how-to-get-token-and-cookie
 ```
 docker compose -d --build
 ```
+
+### Alternative:
+
+Create a new folder and add a `.env` as described above, then create a `docker-compose.yml` file with these contents:
+
+```
+version: "3.8"
+
+services:
+  slack-auto-away:
+    environment:
+      SLACK_TOKEN: ${SLACK_TOKEN}
+      SLACK_COOKIE: ${SLACK_COOKIE}
+      CRON_AUTO: ${CRON_AUTO}
+      CRON_AWAY: ${CRON_AWAY}
+      TIMEZONE: ${TIMEZONE}
+    build:
+      context: .
+      dockerfile: Dockerfile
+```
+
+Then run it:
+
+```
+docker compose up -d
+```
