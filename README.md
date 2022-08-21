@@ -2,6 +2,8 @@
 
 This let's you automatically set yourself away and back on a schedule using cron.
 
+When there is a status text set, the presence will not be updated.
+
 ## Getting started
 
 ### Getting Slack token and cookie
