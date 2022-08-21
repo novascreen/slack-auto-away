@@ -1,5 +1,7 @@
 # Automatically update Slack presence
 
+This let's you automatically set yourself away and back on a schedule using cron.
+
 ## Getting started
 
 ### Getting Slack token and cookie
